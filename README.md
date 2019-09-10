@@ -19,20 +19,21 @@ Given that Sparkify wants to analyze their users' daily activity and delve into 
  - Using SQL would be most appropriate to answer business questions on the fly. 
  - SQL will allow us to use JOINS and build simple ERD models designed to answer business questions faster. 
  
-# shema design
+# Schema Design
 
-*Fact Table*: songplays: attributes referencing to the dimension tables.
-*Dimension Tables*: users, songs, artists and time table.
+**Fact Table**: songplays: attributes referencing to the dimension tables.
 
-## Insert Picture of star schema here
+**Dimension Tables**: users, songs, artists and time table.
 
+![alt text](https://github.com/Katba-Caroline/Data_Modelling_Postgress/blob/master/Postgress_Star.png)
 
 # Steps taken to create the ETL Script
 
 1. Wrote DROP, CREATE and INSERT query statements in sql_queries.py
 
 2. Run  in console 
-    python create_tables.py
+        
+        python create_tables.py
     
 3. Used test.ipynb Jupyter Notebook to interactively verify that all tables were created correctly.
 
@@ -41,13 +42,14 @@ Given that Sparkify wants to analyze their users' daily activity and delve into 
 5. Wrote etl.py based on etl.ipynb after testing in test.ipynb.
 
 6. Run etl in console, and verify that script runs:
-    python etl.py
+        
+        python etl.py
     
 
 # Project files:
-1. *data folder* All the JSON Files needed.
-2. *sql_queries.py* contains all create, drop and insert sql queries.
-3. *create_tables.py* drops and creates tables. run this file to reset the tables before running the ETL scripts.
-4. *test.ipynb* displays the first few rows of each table to check the database.
-5. *etl.ipynb* reads and processes a single file from song_data and log_data and loads the data into the tables.
-6. *etl.py* reads and processes files from song_data and log_data and loads them into the tables.
+1. **data folder** All the JSON Files needed.
+2. **sql_queries.py** contains all create, drop and insert sql queries.
+3. **create_tables.py** drops and creates tables. run this file to reset the tables before running the ETL scripts.
+4. **test.ipynb** displays the first few rows of each table to check the database.
+5. **etl.ipynb** reads and processes a single file from song_data and log_data and loads the data into the tables.
+6. **etl.py** reads and processes files from song_data and log_data and loads them into the tables.
